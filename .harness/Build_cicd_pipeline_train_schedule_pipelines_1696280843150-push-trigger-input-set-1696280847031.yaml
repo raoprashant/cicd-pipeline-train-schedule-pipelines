@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_cicd_pipeline_train_schedule_pipelines_1696280843150-push-trigger-input-set
+  identifier: Build_cicd_pipeline_train_schedule_pipelines_1696280843150pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_cicd_pipeline_train_schedule_pipelines_1696280843150
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
