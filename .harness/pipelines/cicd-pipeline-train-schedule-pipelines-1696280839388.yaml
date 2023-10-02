@@ -6,9 +6,11 @@ pipeline:
   properties:
     ci:
       codebase:
-        build: <+input>
         connectorRef: account.Github
         repoName: cicd-pipeline-train-schedule-pipelines
+        build: <+input>
+        sslVerify: true
+        prCloneStrategy: MergeCommit
   stages:
     - stage:
         identifier: build
@@ -38,3 +40,6 @@ pipeline:
             type: Cloud
             spec: {}
         type: CI
+  allowStageExecutions: true
+  flowControl:
+    barriers: []
